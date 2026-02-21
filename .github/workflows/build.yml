@@ -18,8 +18,7 @@ jobs:
       run: |
         chmod +x ./gradlew || true
         gradle wrapper --gradle-version 8.4
-        ./gradlew :app:assembleDebug         ./
-
+        ./gradlew :app:assembleDebug
     - name: Salva l'APK compilato
       uses: actions/upload-artifact@v4
       with:
