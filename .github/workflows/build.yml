@@ -16,9 +16,8 @@ jobs:
         java-version: '17'
     - name: Prepara Gradle e Compila l'App
       run: |
-        chmod +x ./        gradle wrapper --gradle-version 8.4
-|| true
-        gradle wrapper
+        chmod +x ./gradlew || true
+        gradle wrapper --gradle-version 8.4
         ./gradlew assembleDebug
     - name: Salva l'APK compilato
       uses: actions/upload-artifact@v4
